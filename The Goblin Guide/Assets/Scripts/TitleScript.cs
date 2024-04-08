@@ -21,5 +21,10 @@ public class TitleScript : MonoBehaviour
         {
             rigidbody.isKinematic = false;
         }
+
+        if(gameObject.transform.position.y < -50)
+        {
+            Destroy(gameObject);
+        }
     }
 }
