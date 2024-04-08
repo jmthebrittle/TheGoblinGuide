@@ -5,7 +5,7 @@ using UnityEngine;
 public class TitleScript : MonoBehaviour
 {
 
-    public Rigidbody rigidbody;
+    Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
