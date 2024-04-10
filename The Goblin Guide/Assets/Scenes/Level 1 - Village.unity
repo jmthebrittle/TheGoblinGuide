@@ -12442,18 +12442,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 379268883}
-    - target: {fileID: 743822314005129255, guid: 67106695b802bba4da6003b7d7b7ef86, type: 3}
-      propertyPath: offset.z
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 743822314005129255, guid: 67106695b802bba4da6003b7d7b7ef86, type: 3}
-      propertyPath: maxViewAngle
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 743822314005129255, guid: 67106695b802bba4da6003b7d7b7ef86, type: 3}
-      propertyPath: minViewAngle
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5864315615991491546, guid: 67106695b802bba4da6003b7d7b7ef86, type: 3}
       propertyPath: m_Name
       value: Main Camera
