@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class GoldPickup : MonoBehaviour
@@ -20,7 +21,7 @@ public class GoldPickup : MonoBehaviour
     }
 	
 	private void OnTriggerEnter(Collider other){
-		if(other.tag == "Player"){			
+		if(other.tag == "Player"){
 			Destroy(gameObject);
 		}
 	}

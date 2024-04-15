@@ -22,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     Camera playerCam;
 
+    //pickups
+    public int goldvalue;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -70,6 +73,15 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             charGrounded= true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Coin")
+        {
+            goldvalue++;
+            UnityEngine.Debug.Log(goldvalue);
         }
     }
 }
