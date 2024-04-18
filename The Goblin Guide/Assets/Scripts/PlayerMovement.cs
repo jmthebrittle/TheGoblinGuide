@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     //pickups
     public int goldvalue;
+    public int mushroomvalue;
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         inputDirection = new Vector3(horizontal, 0.0f, vertical);
 
-        if(Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.LeftShift) && mushroomvalue >= 1)
         {
             speed = sprint;
         }
@@ -81,7 +82,13 @@ public class PlayerMovement : MonoBehaviour
         if (other.tag == "Coin")
         {
             goldvalue++;
-            UnityEngine.Debug.Log(goldvalue);
+            UnityEngine.Debug.Log("Gold picked up: " + goldvalue);
+        }
+
+        if (other.tag == "Mushroom" && goldvalue >= 45)
+        {
+            mushroomvalue++;
+            UnityEngine.Debug.Log("Mushrooms collected: " + mushroomvalue);
         }
     }
 }

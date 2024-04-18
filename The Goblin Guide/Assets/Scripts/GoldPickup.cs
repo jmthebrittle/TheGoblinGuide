@@ -21,9 +21,9 @@ public class GoldPickup : MonoBehaviour
     }
 	
 	private void OnTriggerEnter(Collider other){
-		if(other.tag == "Player"){
+		if(this.tag == "Coin" && other.tag == "Player"){
 			Destroy(gameObject);
 		}
-	}
+    }
 	
 }
