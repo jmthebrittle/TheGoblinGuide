@@ -41,11 +41,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftShift) && mushroomvalue >= 1)
         {
-            speed = sprint;
+            speed = 20 * (1 + mushroomvalue);
         }
         else
         {
-            speed = 10;
+            speed = 15;
         }
 
         if (inputDirection.magnitude >= 0.1f)
@@ -85,10 +85,12 @@ public class PlayerMovement : MonoBehaviour
             UnityEngine.Debug.Log("Gold picked up: " + goldvalue);
         }
 
-        if (other.tag == "Mushroom" && goldvalue >= 45)
+        if (other.tag == "Mushroom" && goldvalue >= 15)
         {
             mushroomvalue++;
+            goldvalue -= 15;
             UnityEngine.Debug.Log("Mushrooms collected: " + mushroomvalue);
+            Destroy(other.gameObject);
         }
     }
 }

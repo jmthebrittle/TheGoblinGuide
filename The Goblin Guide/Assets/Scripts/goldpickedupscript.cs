@@ -21,4 +21,17 @@ public class goldpickedupscript : MonoBehaviour
         goldText.text = "Gold: " + playergold;
         UnityEngine.Debug.Log(playergold);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Coin")
+        {
+            playergold++;
+        }
+
+        if (other.tag == "Mushroom" && playergold >= 15)
+        {
+            playergold -= 15;
+        }
+    }
 }
